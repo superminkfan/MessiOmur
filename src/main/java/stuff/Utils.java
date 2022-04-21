@@ -108,4 +108,28 @@ public class Utils {
         }
         return res % n;
     }
+
+    public static int invert(int a, int m)
+    {
+        if (a < 1 || m < 2)
+            return -1;
+
+        int u1 = m;
+        int u2 = 0;
+        int v1 = a;
+        int v2 = 1;
+
+        while (v1 != 0)
+        {
+            int q = u1 / v1;
+            int t1 = u1 - q * v1;
+            int t2 = u2 - q * v2;
+            u1 = v1;
+            u2 = v2;
+            v1 = t1;
+            v2 = t2;
+        }
+
+        return u1 == 1 ? (u2 + m) % m : -1;
+    }
 }

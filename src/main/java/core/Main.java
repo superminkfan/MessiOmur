@@ -4,15 +4,26 @@ import stuff.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int ea = 49, eb = 25, p = 67;
+        int da = Utils.invert(ea, p-1);
+        int db = Utils.invert(eb, p-1);;
 
-        String msg = "zikunov";
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("ea = " + ea);
+        System.out.println("eb = " + eb);
+        System.out.println("p = " + p);
+        System.out.println("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
+        System.out.println("da = " + da);
+        System.out.println("db = " + db);
+        System.out.println("Please Enter Your Message : ");
+        String msg = scan.next();
 
         List<Integer> list = Utils.getNumbers(msg);
-
-        int ea = 49, eb = 25, p = 67, da = 31, db = 37;
 
         List<Integer> listM1 = new ArrayList<>();
         List<Integer> listM2 = new ArrayList<>();
